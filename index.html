@@ -4,259 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/reset.css">
     <link rel="stylesheet" href="Styles/style.css">
-    <script src="JavaScripts/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Ocean Shepherd</title>
 </head>
 
-<body>
-    <header id="header">
-        <div id="titre">Ocean Shepherd</div>
+<body class="vw-100 vh-100 d-flex align-items-center flex-column justify-content-between bg-color-1">
+    <header id="header" class="vw-100 d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-5">
+                    <div class="titre">Ocean</div>
+                </div>
+                <div class="col-2">
+                    <div id="logo"></div>
+                </div>
+                <div class="col-5">
+                    <div class="titre">Shepherd</div>
+                </div>
+            </div>
+        </div>
     </header>
-    <div id="grille_joueur">
-    <!-- LIGNE 0 -->
-        <button type="button" class="cellule" id="A0" onClick=""></button>
-        <button type="button" class="cellule" id="B0" onClick=""></button>
-        <button type="button" class="cellule" id="C0" onClick=""></button>
-        <button type="button" class="cellule" id="D0" onClick=""></button>
-        <button type="button" class="cellule" id="E0" onClick=""></button>
-        <button type="button" class="cellule" id="F0" onClick=""></button>
-        <button type="button" class="cellule" id="G0" onClick=""></button>
-        <button type="button" class="cellule" id="H0" onClick=""></button>
-        <button type="button" class="cellule" id="I0" onClick=""></button>
-        <button type="button" class="cellule" id="J0" onClick=""></button>
-        <br>
-    <!-- LIGNE 1 -->
-        <button type="button" class="cellule" id="A1" onClick=""></button>
-        <button type="button" class="cellule" id="B1" onClick=""></button>
-        <button type="button" class="cellule" id="C1" onClick=""></button>
-        <button type="button" class="cellule" id="D1" onClick=""></button>
-        <button type="button" class="cellule" id="E1" onClick=""></button>
-        <button type="button" class="cellule" id="F1" onClick=""></button>
-        <button type="button" class="cellule" id="G1" onClick=""></button>
-        <button type="button" class="cellule" id="H1" onClick=""></button>
-        <button type="button" class="cellule" id="I1" onClick=""></button>
-        <button type="button" class="cellule" id="J1" onClick=""></button>
-        <br>
-    <!-- LIGNE 2 -->
-        <button type="button" class="cellule" id="A2" onClick=""></button>
-        <button type="button" class="cellule" id="B2" onClick=""></button>
-        <button type="button" class="cellule" id="C2" onClick=""></button>
-        <button type="button" class="cellule" id="D2" onClick=""></button>
-        <button type="button" class="cellule" id="E2" onClick=""></button>
-        <button type="button" class="cellule" id="F2" onClick=""></button>
-        <button type="button" class="cellule" id="G2" onClick=""></button>
-        <button type="button" class="cellule" id="H2" onClick=""></button>
-        <button type="button" class="cellule" id="I2" onClick=""></button>
-        <button type="button" class="cellule" id="J2" onClick=""></button>
-        <br>
-    <!-- LIGNE 3 -->    
-        <button type="button" class="cellule" id="A3" onClick=""></button>
-        <button type="button" class="cellule" id="B3" onClick=""></button>
-        <button type="button" class="cellule" id="C3" onClick=""></button>
-        <button type="button" class="cellule" id="D3" onClick=""></button>
-        <button type="button" class="cellule" id="E3" onClick=""></button>
-        <button type="button" class="cellule" id="F3" onClick=""></button>
-        <button type="button" class="cellule" id="G3" onClick=""></button>
-        <button type="button" class="cellule" id="H3" onClick=""></button>
-        <button type="button" class="cellule" id="I3" onClick=""></button>
-        <button type="button" class="cellule" id="J3" onClick=""></button>
-        <br>
-    <!-- LIGNE 4 -->
-        <button type="button" class="cellule" id="A4" onClick=""></button>
-        <button type="button" class="cellule" id="B4" onClick=""></button>
-        <button type="button" class="cellule" id="C4" onClick=""></button>
-        <button type="button" class="cellule" id="D4" onClick=""></button>
-        <button type="button" class="cellule" id="E4" onClick=""></button>
-        <button type="button" class="cellule" id="F4" onClick=""></button>
-        <button type="button" class="cellule" id="G4" onClick=""></button>
-        <button type="button" class="cellule" id="H4" onClick=""></button>
-        <button type="button" class="cellule" id="I4" onClick=""></button>
-        <button type="button" class="cellule" id="J4" onClick=""></button>
-        <br>
-    <!-- LIGNE 5 -->
-        <button type="button" class="cellule" id="A5" onClick=""></button>
-        <button type="button" class="cellule" id="B5" onClick=""></button>
-        <button type="button" class="cellule" id="C5" onClick=""></button>
-        <button type="button" class="cellule" id="D5" onClick=""></button>
-        <button type="button" class="cellule" id="E5" onClick=""></button>
-        <button type="button" class="cellule" id="F5" onClick=""></button>
-        <button type="button" class="cellule" id="G5" onClick=""></button>
-        <button type="button" class="cellule" id="H5" onClick=""></button>
-        <button type="button" class="cellule" id="I5" onClick=""></button>
-        <button type="button" class="cellule" id="J5" onClick=""></button>
-        <br>
-    <!-- LIGNE 6 -->
-        <button type="button" class="cellule" id="A6" onClick=""></button>
-        <button type="button" class="cellule" id="B6" onClick=""></button>
-        <button type="button" class="cellule" id="C6" onClick=""></button>
-        <button type="button" class="cellule" id="D6" onClick=""></button>
-        <button type="button" class="cellule" id="E6" onClick=""></button>
-        <button type="button" class="cellule" id="F6" onClick=""></button>
-        <button type="button" class="cellule" id="G6" onClick=""></button>
-        <button type="button" class="cellule" id="H6" onClick=""></button>
-        <button type="button" class="cellule" id="I6" onClick=""></button>
-        <button type="button" class="cellule" id="J6" onClick=""></button>
-        <br> 
-    <!-- LIGNE 7 -->  
-        <button type="button" class="cellule" id="A7" onClick=""></button>
-        <button type="button" class="cellule" id="B7" onClick=""></button>
-        <button type="button" class="cellule" id="C7" onClick=""></button>
-        <button type="button" class="cellule" id="D7" onClick=""></button>
-        <button type="button" class="cellule" id="E7" onClick=""></button>
-        <button type="button" class="cellule" id="F7" onClick=""></button>
-        <button type="button" class="cellule" id="G7" onClick=""></button>
-        <button type="button" class="cellule" id="H7" onClick=""></button>
-        <button type="button" class="cellule" id="I7" onClick=""></button>
-        <button type="button" class="cellule" id="J7" onClick=""></button>
-        <br>
-    <!-- LIGNE 8 -->
-        <button type="button" class="cellule" id="A8" onClick=""></button>
-        <button type="button" class="cellule" id="B8" onClick=""></button>
-        <button type="button" class="cellule" id="C8" onClick=""></button>
-        <button type="button" class="cellule" id="D8" onClick=""></button>
-        <button type="button" class="cellule" id="E8" onClick=""></button>
-        <button type="button" class="cellule" id="F8" onClick=""></button>
-        <button type="button" class="cellule" id="G8" onClick=""></button>
-        <button type="button" class="cellule" id="H8" onClick=""></button>
-        <button type="button" class="cellule" id="I8" onClick=""></button>
-        <button type="button" class="cellule" id="J8" onClick=""></button>
-        <br>
-    <!-- LIGNE 9 -->
-        <button type="button" class="cellule" id="A9" onClick=""></button>
-        <button type="button" class="cellule" id="B9" onClick=""></button>
-        <button type="button" class="cellule" id="C9" onClick=""></button>
-        <button type="button" class="cellule" id="D9" onClick=""></button>
-        <button type="button" class="cellule" id="E9" onClick=""></button>
-        <button type="button" class="cellule" id="F9" onClick=""></button>
-        <button type="button" class="cellule" id="G9" onClick=""></button>
-        <button type="button" class="cellule" id="H9" onClick=""></button>
-        <button type="button" class="cellule" id="I9" onClick=""></button>
-        <button type="button" class="cellule" id="J9" onClick=""></button>
+    <div class="container bg-color-1">
+        <div class="row flex-column">
+            <div class="col d-flex justify-content-center align-items-center mt-5">
+                <label for="nbBateau" class="label">Nombre de bateaux :</label>
+                <input type="number" id="nbBateau" placeholder="Entre 2 et 4" class="form-control-sm border-1 ml-4 mr-4 bg-color-2"/>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <button class='btn btn-color-1' onClick='startGame()'>Placer votre flotte</button>
+            </div>
+        </div>
     </div>
-    <hr>
-    <div id="grille_bot">
-    <!-- LIGNE 0 -->
-        <button type="button" class="cellule__bot" id="Q0"></button>
-        <button type="button" class="cellule__bot" id="R0"></button>
-        <button type="button" class="cellule__bot" id="S0"></button>
-        <button type="button" class="cellule__bot" id="T0"></button>
-        <button type="button" class="cellule__bot" id="U0"></button>
-        <button type="button" class="cellule__bot" id="V0"></button>
-        <button type="button" class="cellule__bot" id="W0"></button>
-        <button type="button" class="cellule__bot" id="X0"></button>
-        <button type="button" class="cellule__bot" id="Y0"></button>
-        <button type="button" class="cellule__bot" id="Z0"></button>
-        <br>
-    <!-- LIGNE 1 -->
-        <button type="button" class="cellule__bot" id="Q1"></button>
-        <button type="button" class="cellule__bot" id="R1"></button>
-        <button type="button" class="cellule__bot" id="S1"></button>
-        <button type="button" class="cellule__bot" id="T1"></button>
-        <button type="button" class="cellule__bot" id="U1"></button>
-        <button type="button" class="cellule__bot" id="V1"></button>
-        <button type="button" class="cellule__bot" id="W1"></button>
-        <button type="button" class="cellule__bot" id="X1"></button>
-        <button type="button" class="cellule__bot" id="Y1"></button>
-        <button type="button" class="cellule__bot" id="Z1"></button>
-        <br>
-    <!-- LIGNE 2 -->
-        <button type="button" class="cellule__bot" id="Q2"></button>
-        <button type="button" class="cellule__bot" id="R2"></button>
-        <button type="button" class="cellule__bot" id="S2"></button>
-        <button type="button" class="cellule__bot" id="T2"></button>
-        <button type="button" class="cellule__bot" id="U2"></button>
-        <button type="button" class="cellule__bot" id="V2"></button>
-        <button type="button" class="cellule__bot" id="W2"></button>
-        <button type="button" class="cellule__bot" id="X2"></button>
-        <button type="button" class="cellule__bot" id="Y2"></button>
-        <button type="button" class="cellule__bot" id="Z2"></button>
-        <br>
-    <!-- LIGNE 3 -->    
-        <button type="button" class="cellule__bot" id="Q3"></button>
-        <button type="button" class="cellule__bot" id="R3"></button>
-        <button type="button" class="cellule__bot" id="S3"></button>
-        <button type="button" class="cellule__bot" id="T3"></button>
-        <button type="button" class="cellule__bot" id="U3"></button>
-        <button type="button" class="cellule__bot" id="V3"></button>
-        <button type="button" class="cellule__bot" id="W3"></button>
-        <button type="button" class="cellule__bot" id="X3"></button>
-        <button type="button" class="cellule__bot" id="Y3"></button>
-        <button type="button" class="cellule__bot" id="Z3"></button>
-        <br>
-    <!-- LIGNE 4 -->
-        <button type="button" class="cellule__bot" id="Q4"></button>
-        <button type="button" class="cellule__bot" id="R4"></button>
-        <button type="button" class="cellule__bot" id="S4"></button>
-        <button type="button" class="cellule__bot" id="T4"></button>
-        <button type="button" class="cellule__bot" id="U4"></button>
-        <button type="button" class="cellule__bot" id="V4"></button>
-        <button type="button" class="cellule__bot" id="W4"></button>
-        <button type="button" class="cellule__bot" id="X4"></button>
-        <button type="button" class="cellule__bot" id="Y4"></button>
-        <button type="button" class="cellule__bot" id="Z4"></button>
-        <br>
-    <!-- LIGNE 5 -->
-        <button type="button" class="cellule__bot" id="Q5"></button>
-        <button type="button" class="cellule__bot" id="R5"></button>
-        <button type="button" class="cellule__bot" id="S5"></button>
-        <button type="button" class="cellule__bot" id="T5"></button>
-        <button type="button" class="cellule__bot" id="U5"></button>
-        <button type="button" class="cellule__bot" id="V5"></button>
-        <button type="button" class="cellule__bot" id="W5"></button>
-        <button type="button" class="cellule__bot" id="X5"></button>
-        <button type="button" class="cellule__bot" id="Y5"></button>
-        <button type="button" class="cellule__bot" id="Z5"></button>
-        <br>
-    <!-- LIGNE 6 -->
-        <button type="button" class="cellule__bot" id="Q6"></button>
-        <button type="button" class="cellule__bot" id="R6"></button>
-        <button type="button" class="cellule__bot" id="S6"></button>
-        <button type="button" class="cellule__bot" id="T6"></button>
-        <button type="button" class="cellule__bot" id="U6"></button>
-        <button type="button" class="cellule__bot" id="V6"></button>
-        <button type="button" class="cellule__bot" id="W6"></button>
-        <button type="button" class="cellule__bot" id="X6"></button>
-        <button type="button" class="cellule__bot" id="Y6"></button>
-        <button type="button" class="cellule__bot" id="Z6"></button>
-        <br>
-    <!-- LIGNE 7 -->  
-        <button type="button" class="cellule__bot" id="Q7"></button>
-        <button type="button" class="cellule__bot" id="R7"></button>
-        <button type="button" class="cellule__bot" id="S7"></button>
-        <button type="button" class="cellule__bot" id="T7"></button>
-        <button type="button" class="cellule__bot" id="U7"></button>
-        <button type="button" class="cellule__bot" id="V7"></button>
-        <button type="button" class="cellule__bot" id="W7"></button>
-        <button type="button" class="cellule__bot" id="X7"></button>
-        <button type="button" class="cellule__bot" id="Y7"></button>
-        <button type="button" class="cellule__bot" id="Z7"></button>
-        <br>
-    <!-- LIGNE 8 -->
-        <button type="button" class="cellule__bot" id="Q8"></button>
-        <button type="button" class="cellule__bot" id="R8"></button>
-        <button type="button" class="cellule__bot" id="S8"></button>
-        <button type="button" class="cellule__bot" id="T8"></button>
-        <button type="button" class="cellule__bot" id="U8"></button>
-        <button type="button" class="cellule__bot" id="V8"></button>
-        <button type="button" class="cellule__bot" id="W8"></button>
-        <button type="button" class="cellule__bot" id="X8"></button>
-        <button type="button" class="cellule__bot" id="Y8"></button>
-        <button type="button" class="cellule__bot" id="Z8"></button>
-        <br>
-    <!-- LIGNE 9 -->
-        <button type="button" class="cellule__bot" id="Q9"></button>
-        <button type="button" class="cellule__bot" id="R9"></button>
-        <button type="button" class="cellule__bot" id="S9"></button>
-        <button type="button" class="cellule__bot" id="T9"></button>
-        <button type="button" class="cellule__bot" id="U9"></button>
-        <button type="button" class="cellule__bot" id="V9"></button>
-        <button type="button" class="cellule__bot" id="W9"></button>
-        <button type="button" class="cellule__bot" id="X9"></button>
-        <button type="button" class="cellule__bot" id="Y9"></button>
-        <button type="button" class="cellule__bot" id="Z9"></button>
-        <br>
-    </div>
+    <div class="container d-flex justify-content-center">
+        <div class="row mt-5 justify-content-center">
+            <div class="col-2 text-center align-self-center" id="j1"></div>
+            <div id="jeu" class="col-auto"></div>
+            <div class="col-2 text-center align-self-center" id="j2"></div>
+        </div>  
+        <div class="alert alert-success d-none" role="alert"></div>
+    </div>      
+    <footer id="footer" class="d-flex justify-content-center align-items-end vw-100">
+        <div class="container-xxl p-0 m-0 vw-100">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <img src="images/fond.png" alt="plage 8bit">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Javascripts/toolbox.js"></script>
+    <script src="Javascripts/IA.js"></script>
+    <script src="Javascripts/jeu.js"></script>
+    <script src="JavaScripts/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
