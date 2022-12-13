@@ -1,6 +1,6 @@
 var jeu = {
-    nbColonne : 5,
-    nbLigne : 5,
+    nbColonne :9,
+    nbLigne : 9,
     grille : [],
 
     nbCaseJ1 : 0,
@@ -69,7 +69,7 @@ var jeu = {
     afficherGrille : function(){
         const jeu = document.querySelector("#jeu");
         jeu.innerHTML = "";
-        var ratio = (100 - (10 * (this.nbColonne-5)+1));
+        var ratio = (100 - (10 * (this.nbColonne-9)+1));
         //2 bateaux --> 5 colonnes --> 90 px
         //3 bateaux --> 7 colonnes --> 70px
         //4 bateaux --> 9 colonnes --> 50px
