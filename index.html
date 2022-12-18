@@ -1,70 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Ocean Shepherd</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Styles/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+        <title>Ocean Shepherd 🏴‍☠️</title>
+    </head>
 
-<body class="vw-100 vh-100 d-flex align-items-center flex-column justify-content-between bg-color-1">
-    <header id="header" class="vw-100 d-flex justify-content-center align-items-center">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-5">
-                    <div class="titre">Ocean</div>
-                </div>
-                <div class="col-2">
-                    <div id="logo"></div>
-                </div>
-                <div class="col-5">
-                    <div class="titre">Shepherd</div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="container bg-color-1">
-        <div class="row flex-column">
-            <div class="col d-flex justify-content-center align-items-center mt-5">
-                <label for="nbBateau" class="label">Nombre de bateaux :</label>
-                <input type="number" id="nbBateau" placeholder="Entre 2 et 4" class="form-control-sm border-1 ml-4 mr-4 bg-color-2"/>
-            </div>
-            <div class="col d-flex justify-content-center align-items-center">
-                <button class='btn btn-color-1' onClick='startGame()'>Placer votre flotte</button>
-            </div>
-        </div>
-    </div>
-    <div class="container d-flex justify-content-center">
-        <div class="row mt-5 justify-content-center">
-            <div class="col-2 text-center align-self-center" id="j1"></div>
-            <div id="jeu" class="col-auto"></div>
-            <div class="col-2 text-center align-self-center" id="j2"></div>
-        </div>  
-        <div class="alert alert-success d-none" role="alert"></div>
-    </div>      
-    <footer id="footer" class="d-flex justify-content-center align-items-end vw-100">
-        <div class="container-xxl p-0 m-0 vw-100">
-            <div class="row">
-                <div class="col-12 p-0">
-                    <img src="images/fond.png" alt="plage 8bit">
-                </div>
-            </div>
-        </div>
-    </footer>
+    <body class="d-flex flex-column justify-content-between">
 
-    <script src="Javascripts/toolbox.js"></script>
-    <script src="Javascripts/IA.js"></script>
-    <script src="Javascripts/jeu.js"></script>
-    <script src="JavaScripts/main.js"></script>
+        <!-- Audio -->
+        <audio id="audioPlayer" autoplay>
+            <source src="musique_pirate.mp3"></source>
+        </audio>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+        <!-- Header -->
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div id="header_titre">Ocean Shepherd</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main id="main" class="d-flex flex-column justify-content-around h-100">
+
+            <!-- Block Règles -->
+            <div class="container regles_content" id="container_regle">
+
+                <!-- Règles -->
+                <div class="row">
+                    <div class="col p-0">
+                        <div id="regles">
+                            <span class="main_titre">Vous devez vaincre la flotte du <span class="capitaine_watson">Capitaine Watson</span> !</span><br>
+                            Pour ce faire, inscrivez votre nom de pirate,<br>
+                            puis cliquez sur le bouton START.<br>
+                            Cliquez ensuite sur une case pour tentez de toucher un des batiments du Capitaine Watson.<br>
+                            Le jeu se termine losque tout les batiments sont coulé.<br>
+                            Essayez de vaincre la flotte du Capitaine Watson en un minim
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Valeur de chaque pions -->
+                <div class="row p-3">
+                    <div class="col-6 p-0 pr-2">
+                        <div class="row mb-2">
+                            <div class="col-6 d-flex justify-content-end p-0">
+                                <div class="pion1"></div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="points">-5 pts</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-end p-0">
+                                <div class="pion3"></div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="points">+20 pts</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 p-0 pr-2">
+                        <div class="row mb-2">
+                            <div class="col-6 d-flex justify-content-end p-0">
+                                <div class="pion2"></div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="points">+10 pts</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-end p-0">
+                                <div class="pion4"></div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="points">+50 pts</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nom du joueur -->
+            <div class="container" id="container_nameForm">
+                <div class="row justify-content-center mt-3">
+                    <div class="col-5">
+                        <input class="form-control col-auto" id="nameForm" type="text" placeholder="Surnom" aria-label="nom de joueur" maxlength="8">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bouton Start -->
+            <div class="container" id="container_start">
+                <div class="row justify-content-center mt-3">
+                    <button class="btn btn-color" onclick="start()" type="button">START</button>
+                </div>
+            </div>
+
+            <!-- Grille du jeu -->
+            <div class="container d-flex justify-content-center" id="container_jeu" hidden>
+                <div class="row" id="row_jeu" hidden>
+                    <div class="col" id="col_jeu" hidden>
+                        <div id="grille_jeu" hidden></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Affichage Score -->
+            <div class="container" id="container_fin" hidden>
+                <div class="row" id="row_fin" hidden>
+                    <div class="col-12" id="col_fin" hidden>
+                        <div id="message_fin" hidden></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bouton Restart -->
+            <div class="container" id="container_restart" hidden>
+                <div class="row justify-content-center" id="row_restart" hidden>
+                    <div class="btn btn-color" onclick="restart()" type="button" id="btn_restart" hidden>RESTART</div>
+                </div>
+            </div>
+            
+            <!-- Bouton On/Off musique -->
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-1 p-0">
+                        <button type="button" class="btn-volume btn-color" onclick="play('audioPlayer', this)" id="audio"></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <script src="JavaScripts/script.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 </html>
