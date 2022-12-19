@@ -1,3 +1,43 @@
+/* Création tableau avec GPTchat */
+
+const tableau = [];
+let compteur0 = 0;
+let compteur1 = 0;
+let compteur2 = 0;
+let compteur3 = 0;
+
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+  }
+
+while (compteur0 < 10 || compteur1 < 1 || compteur2 < 2 || compteur3 < 3) {
+  const ligne = [];
+  for (let j = 0; j < 4; j++) {
+    const nombreAleatoire = Math.floor(Math.random() * 7);
+    if (nombreAleatoire < 1 && compteur1 < 1) {
+      ligne.push(1);
+      compteur1++;
+    } else if (nombreAleatoire < 3 && compteur2 < 2) {
+      ligne.push(2);
+      compteur2++;
+    } else if (nombreAleatoire < 6 && compteur3 < 3) {
+      ligne.push(3);
+      compteur3++;
+    } else if (compteur0 < 10) {
+      ligne.push(0);
+      compteur0++;
+    }
+  }
+  if (ligne.length === 4) {
+    tableau.push(ligne);
+  }
+  if (tableau.length === 4) {
+    break;
+  }
+}
+shuffle(tableau);
+
+
 
 /* ----- Fonction lancement du jeu (start) ----- */
 let regleJeu = document.getElementById("container_regle");
@@ -26,44 +66,6 @@ function start() {
 
 
 
-/* ----- Création d'une grille avec positionnement des pions aléatoire ----- */
-
-let tab1 = Array.apply(null, Array(4)).map(function() { 
-    return Math.floor(Math.random() * 4); 
-});
-let tab2 = Array.apply(null, Array(4)).map(function() { 
-    return Math.floor(Math.random() * 4); 
-});
-let tab3 = Array.apply(null, Array(4)).map(function() { 
-    return Math.floor(Math.random() * 4); 
-});
-let tab4 = Array.apply(null, Array(4)).map(function() { 
-    return Math.floor(Math.random() * 4); 
-});
-
-let tabPions = [tab1, tab2, tab3, tab4]
-console.log("Création de tableau aléatoire", tabPions);
-
-
-
-
-/* ----- Fonction aléatoire des pions ----- */
-
-function shuffle(array) {
-    array.sort(() => Math.random() - 0.5);
-  }
-
-let grillePions = [
-    [0,2,2,0],
-    [0,0,0,1],
-    [3,3,3,0],
-    [0,0,0,0]
-];
-
-shuffle(grillePions);
-console.log("Fonction Shuffle", grillePions)
-
-
 /* ----- Fonction création de la grille & affectation des pions ----- */
 
 function creationGrille(){
@@ -89,7 +91,7 @@ function creationGrille(){
     // Affectation des pions sur les cellules //
     for(var x = 0; x < xMax; x++){
         for(var y = 0; y < yMax; y++){
-            document.getElementById(x+" "+y).value = grillePions[x][y];
+            document.getElementById(x+" "+y).value = tableau[x][y];
         }
     }
     game();

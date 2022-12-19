@@ -10,7 +10,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
-        <title>Ocean Shepherd 🏴‍☠️</title>
+        <link rel="icon" href="Images/icon_epee.png">
+        <title>Ocean Shepherd</title>
     </head>
 
     <body class="d-flex flex-column justify-content-between">
@@ -41,12 +42,13 @@
                 <div class="row">
                     <div class="col p-0">
                         <div id="regles">
-                            <span class="main_titre">Vous devez vaincre la flotte du <span class="capitaine_watson">Capitaine Watson</span> !</span><br>
-                            Pour ce faire, inscrivez votre nom de pirate,<br>
+                            <span class="main_titre">Le<span class="capitaine_watson"> Capitaine Watson </span>vous lance un défi !</span><br>
+                            Pour participer, inscrivez votre nom de pirate,<br>
                             puis cliquez sur le bouton START.<br>
-                            Cliquez ensuite sur une case pour tentez de toucher un des batiments du Capitaine Watson.<br>
-                            Le jeu se termine losque tout les batiments sont coulé.<br>
-                            Essayez de vaincre la flotte du Capitaine Watson en un minim
+                            Vous allez devoir retrouver en un minimum de coup les pions caché du Capitaine Watson.<br>
+                            Evitez les cases vides pour marquer un maximum de points !<br>
+                            Le jeu se termine losque tout les pions sont retrouvé.<br>
+                            Bonne chance !
                         </div>
                     </div>
                 </div>
@@ -119,6 +121,11 @@
 
             <!-- Affichage Score -->
             <div class="container" id="container_fin" hidden>
+                <div class="row mb-5" id="row_fin_image">
+                    <div class="col-12 d-flex justify-content-center" id="col_fin_image">
+                        <img src="images/victoire.png" alt="image de victoire" id="image_de_fin">
+                    </div>
+                </div>
                 <div class="row" id="row_fin" hidden>
                     <div class="col-12" id="col_fin" hidden>
                         <div id="message_fin" hidden></div>

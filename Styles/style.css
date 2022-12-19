@@ -170,22 +170,22 @@ body::before {
 
 .btn-volume{
     border: none;
-    background-image: url(../Images/soundoff.png);
+    background-image: url(../Images/volument_off.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgb(255, 208, 0);
     border-radius: 100%;
-    height: 30px;
-    width: 30px;
+    height: 45px;
+    width: 45px;
     display: flex;
 }
 .on{
-    background-image: url(../Images/soundon.png);
+    background-image: url(../Images/volume_on.png);
 }
 
 .off{
-    background-image: url(../Images/soundoff.png);
+    background-image: url(../Images/volument_off.png);
 
 }
 
@@ -263,6 +263,10 @@ body::before {
     text-align: center;
 }
 
+#image_de_fin {
+    width: 200px;
+}
+
 @media (max-width: 400px){
     .cellule {
         height: 60px;
@@ -284,5 +288,10 @@ body::before {
         right: 40px;
         width: 80px;
         height: 80px;
+    }
+
+    .btn-volume {
+        height: 30px;
+        width: 30px;
     }
 }
